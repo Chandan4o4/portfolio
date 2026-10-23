@@ -9,7 +9,7 @@ The codebase is structured so **all content lives in centralized data files** �
 ## ✨ Features
 
 - 🎯 Recruiter-friendly one-page layout with anchored sections
-- 🎨 Polished light/dark theme with smooth toggle (system-aware)
+- 🎨 Polished dark theme (locked — no toggle, no flash)
 - 🎬 Smooth scroll-triggered animations: fades, staggers, counters, magnetic buttons, gradient mesh
 - 📱 Fully responsive — mobile-first
 - ♿ Accessible — semantic HTML, focus styles, reduced-motion respect, skip-to-content link
@@ -24,7 +24,7 @@ The codebase is structured so **all content lives in centralized data files** �
 ```
 portfolio/
 ├── app/
-│   ├── layout.tsx          # Root layout, fonts, metadata, theme provider
+│   ├── layout.tsx          # Root layout, fonts, metadata
 │   ├── page.tsx            # Home — composes all sections
 │   ├── not-found.tsx       # Custom 404
 │   └── globals.css         # Tailwind + design tokens
@@ -41,9 +41,7 @@ portfolio/
 │   │
 │   ├── layout/
 │   │   ├── navbar.tsx          # Sticky nav with mobile drawer
-│   │   ├── footer.tsx
-│   │   ├── theme-provider.tsx  # next-themes wrapper
-│   │   └── theme-toggle.tsx    # Animated sun/moon
+│   │   └── footer.tsx
 │   │
 │   ├── sections/           # Page sections (one per file)
 │   │   ├── hero.tsx
@@ -163,7 +161,7 @@ The build is fully static (`○  (Static)` in the build output).
 | Styling          | Tailwind CSS 4 + custom CSS variables       |
 | Animation        | Framer Motion (`motion`)                    |
 | Icons            | Lucide React + inline brand SVGs            |
-| Theme            | next-themes                                 |
+| Theme            | Locked dark (CSS variables in `globals.css`) |
 | Utilities        | clsx, tailwind-merge, class-variance-authority |
 
 ---

@@ -110,7 +110,7 @@ export function Hero() {
                 {profile.location}
               </span>
             </StaggerItem>
-            {profile.roles.map((role) => (
+            <div style={{ display: 'flex', gap: 5 }}>{profile.roles.map((role) => (
               <StaggerItem key={role}>
                 <Badge variant="outline" className="font-normal">
                   <Sparkles className="h-3 w-3" aria-hidden />
@@ -118,6 +118,7 @@ export function Hero() {
                 </Badge>
               </StaggerItem>
             ))}
+            </div>
           </StaggerContainer>
         </div>
 
@@ -137,7 +138,7 @@ export function Hero() {
                 <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_0_4px_rgba(16,185,129,0.15)]" />
               </div>
               <pre className="mt-4 overflow-hidden font-mono text-[13px] leading-6 text-zinc-700 dark:text-zinc-300">
-{`{
+                {`{
   "name": "${profile.name}",
   "role": "${profile.role}",
   "location": "${profile.location}",

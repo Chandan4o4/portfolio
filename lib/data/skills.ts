@@ -67,6 +67,7 @@ export const skillGroups: SkillGroup[] = [
       "Third-party services that round out a production-ready product.",
     icon: Cloud,
     skills: [
+      { name: "LLM API integration", category: "AI", level: 3 },
       { name: "Razorpay", category: "Payments", level: 4 },
       { name: "Firebase", category: "Backend-as-a-Service", level: 4 },
       { name: "AWS S3", category: "Storage", level: 4 },
